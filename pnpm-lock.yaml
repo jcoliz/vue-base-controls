@@ -9,10 +9,10 @@ importers:
   .:
     dependencies:
       bootstrap:
-        specifier: ^5.3.x
+        specifier: '>=5.3.0'
         version: 5.3.3(@popperjs/core@2.11.8)
       vue:
-        specifier: ^3.5.x
+        specifier: '>=3.0.0'
         version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@types/node':
