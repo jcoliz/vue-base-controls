@@ -1,7 +1,7 @@
 {
   "name": "@coliz/vue-base-controls",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.2",
   "author": "James Coliz, Jr. <jcoliz@outlook.com>",
   "license": "MIT",
   "repository": {
@@ -15,10 +15,6 @@
   ],
   "main": "dist/vue-base-controls.umd.cjs",
   "module": "dist/vue-base-controls.js",
-  "exports": {
-    "import": "./dist/vue-base-controls.js",
-    "require": "./dist/vue-base-controls.umd.cjs"
-  },
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
