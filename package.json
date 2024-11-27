@@ -4,6 +4,10 @@
   "version": "0.0.2",
   "author": "James Coliz, Jr. <jcoliz@outlook.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcoliz/vue-base-controls.git"
+  },
   "type": "module",
   "files": [
     "dist",
@@ -18,8 +22,8 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "bootstrap": ">=5.3.x",
-    "vue": ">=3.5.x"
+    "bootstrap": "^5.3.x",
+    "vue": "^3.5.x"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
