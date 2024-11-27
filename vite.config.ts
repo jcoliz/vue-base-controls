@@ -9,8 +9,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "VueBaseButton",
-      fileName: "vue-base-button"
+      name: "VueBaseControls",
+      fileName: "vue-base-controls"
     },
     rollupOptions: {
       external: ["vue", "bootstrap"],
