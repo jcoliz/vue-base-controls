@@ -1,7 +1,8 @@
+<script setup lang="ts">
+import { ref } from 'vue'
 
-import BaseSectionHeader from './components/BaseSectionHeader.vue';
-
-import BasePageHeader from './components/BasePageHeader.vue';
+const showToast = ref(false)
+</script>
 <template>
   <div>
     <BasePageHeader>BasePageHeader</BasePageHeader>
@@ -13,5 +14,12 @@ import BasePageHeader from './components/BasePageHeader.vue';
       <FeatherIcon icon="users" size="24" class="me-2"/>
       <FeatherIcon icon="home" size="24"/>
     </div>
+    <div v-if="!showToast">
+      <BaseButton visual="primary" @click="showToast = true" class="mt-3">Show toast</BaseButton>
+    </div>
   </div>
+  <BaseToast v-model="showToast">
+      <template #title>TOAST</template>
+      <template #default>This is an example toast</template>
+  </BaseToast>
 </template>
