@@ -3,4 +3,4 @@ import type { App } from 'vue'
 function install(app: App) {
     app.component('BaseButton', BaseButton)
 }
-export { BaseButton, install }
+export { BaseButton, install as default }
