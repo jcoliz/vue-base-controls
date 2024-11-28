@@ -7,9 +7,11 @@ const showToast = ref(false)
   <div class="d-flex flex-column align-items-start">
     <BasePageHeader>BasePageHeader</BasePageHeader>
     <BaseSectionHeader>BaseSectionHeader</BaseSectionHeader>
-    <BaseButton visual="primary" class="me-2">Primary</BaseButton>
-    <BaseButton visual="secondary" class="me-2">Secondary</BaseButton>
-    <BaseButton visual="danger">Danger</BaseButton>
+    <div class="d-flex">
+      <BaseButton visual="primary" class="me-2">Primary</BaseButton>
+      <BaseButton visual="secondary" class="me-2">Secondary</BaseButton>
+      <BaseButton visual="danger">Danger</BaseButton>
+    </div>
 
     <BaseDropDown class="mt-3">
         <template #trigger>
@@ -18,9 +20,9 @@ const showToast = ref(false)
             </button>          
         </template>
         <ul class="dropdown-menu show">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><a class="dropdown-item">Action</a></li>
+          <li><a class="dropdown-item">Another action</a></li>
+          <li><a class="dropdown-item">Something else here</a></li>
         </ul>
     </BaseDropDown>
 
