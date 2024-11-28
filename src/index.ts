@@ -1,6 +1,12 @@
 import BaseButton from "./components/BaseButton.vue";
+import BasePageHeader from "./components/BasePageHeader.vue";
+import BaseSectionHeader from "./components/BaseSectionHeader.vue";
+
 import type { App } from 'vue'
 function install(app: App) {
     app.component('BaseButton', BaseButton)
+    app.component('BasePageHeader', BasePageHeader)
+    app.component('BaseSectionHeader', BaseSectionHeader)
 }
-export { BaseButton, install as default }
+
+export { install as default }
