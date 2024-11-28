@@ -8,14 +8,13 @@ function toggle() {
 }
 
 const slots = useSlots()
-const toggleEl = ref<HTMLElement>();
+const triggerEl = ref<HTMLElement>();
 
 function handleClickOutside(event: any) {
-      if (showing.value && toggleEl.value && !toggleEl.value.contains(event.target)) {
-          console.log('Clicked outside!');
-          showing.value = false;
-      }
+    if (showing.value && triggerEl.value && !triggerEl.value.contains(event.target)) {
+        showing.value = false;
     }
+}
 
 onMounted(() => {
     const slot = slots.trigger;
@@ -24,21 +23,24 @@ onMounted(() => {
         const nodes = slot();
         const node = nodes[0];
         const el = node.el as HTMLElement;
-        toggleEl.value = el;        
+        triggerEl.value = el;
+        // Note that we can't @onclick on the slot itself, so
+        // we'll directly add a listener, now that we have the
+        // element anyway
+        triggerEl.value?.addEventListener('click',toggle)
     }
     document?.addEventListener('click',handleClickOutside)
 })
 
 onUnmounted(() => {
     document?.removeEventListener('click',handleClickOutside)
+    triggerEl.value?.removeEventListener('click',toggle)
 })
 
 </script>
 <template>
     <div class="dropdown">
-        <div @click="toggle">
-            <slot name="trigger"/>
-        </div>
+        <slot name="trigger"/>
         <slot v-if="showing"/>
     </div>
 </template>
