@@ -9,5 +9,9 @@ import BasePageHeader from './components/BasePageHeader.vue';
     <BaseButton visual="primary" class="me-2">Primary</BaseButton>
     <BaseButton visual="secondary" class="me-2">Secondary</BaseButton>
     <BaseButton visual="danger">Danger</BaseButton>
+    <div class="mt-3">
+      <FeatherIcon icon="users" size="24" class="me-2"/>
+      <FeatherIcon icon="home" size="24"/>
+    </div>
   </div>
 </template>
