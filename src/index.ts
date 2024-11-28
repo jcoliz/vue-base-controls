@@ -5,12 +5,20 @@ import FeatherIcon from "./components/FeatherIcon.vue";
 import BaseToast from "./components/BaseToast.vue";
 
 import type { App } from 'vue'
-function install(app: App) {
+
+// Install only the components that are safe for SSR
+function safeControls(app: App) {
     app.component('BaseButton', BaseButton)
     app.component('BasePageHeader', BasePageHeader)
     app.component('BaseSectionHeader', BaseSectionHeader)
     app.component('FeatherIcon', FeatherIcon)
-    app.component('BaseToast', BaseToast)
 }
 
-export { install as default }
+// Install safe components AND client-only components 
+function allControls(app: App) {
+    app.component('BaseToast', BaseToast)
+
+    safeControls(app)
+}
+
+export { safeControls, allControls }
