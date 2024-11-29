@@ -7,6 +7,7 @@ const showToast = ref(false)
   <div class="d-flex flex-column align-items-start">
     <BasePageHeader>BasePageHeader</BasePageHeader>
     <BaseSectionHeader>BaseSectionHeader</BaseSectionHeader>
+    <ComingSoon/>
     <div class="d-flex">
       <BaseButton visual="primary" class="me-2">Primary</BaseButton>
       <BaseButton visual="secondary" class="me-2">Secondary</BaseButton>

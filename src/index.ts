@@ -4,6 +4,7 @@ import BaseSectionHeader from "./components/BaseSectionHeader.vue";
 import FeatherIcon from "./components/FeatherIcon.vue";
 import BaseToast from "./components/BaseToast.vue";
 import BaseDropDown from "./components/BaseDropDown.vue";
+import ComingSoon from "./components/ComingSoon.vue";
 
 import type { App } from 'vue'
 
@@ -14,6 +15,7 @@ function install(app: App) {
     app.component('FeatherIcon', FeatherIcon)
     app.component('BaseToast', BaseToast)
     app.component('BaseDropDown', BaseDropDown)
+    app.component('ComingSoon', ComingSoon)
 }
 
 export { install as default }
